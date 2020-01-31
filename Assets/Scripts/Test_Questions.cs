@@ -8,18 +8,20 @@ public class Test_Questions : MonoBehaviour
 
     public string[] preguntas;
 
-    public int index;
-
     public Text pregunta;
+
+    Test_Botones TB;
 
     private void Start()
     {
+        TB = FindObjectOfType<Test_Botones>();
+
         NuevaPregunta();
     }
 
     public void NuevaPregunta()
     {
-        pregunta.text = preguntas[index];
+        pregunta.text = preguntas[TB.index];
     }
 
 }

@@ -8,11 +8,11 @@ public class Test_Answers : MonoBehaviour
 
     public Text[] botones;
 
-    Test_Questions TQ;
+    Test_Botones TB;
 
     private void Start()
     {
-        TQ = FindObjectOfType<Test_Questions>();
+        TB = FindObjectOfType<Test_Botones>();
 
         NuevaPregunta();
     }
@@ -21,11 +21,11 @@ public class Test_Answers : MonoBehaviour
 
         for (int i = 0; i < 4; i++)
         {
-            if(TQ.index == 0)
+            if(TB.index == 0)
             {
                 botones[i].text = answers0[i];
             }
-            if (TQ.index == 1)
+            if (TB.index == 1)
             {
                 botones[i].text = answers1[i];
             }

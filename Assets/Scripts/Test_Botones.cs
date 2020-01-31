@@ -10,6 +10,8 @@ public class Test_Botones : MonoBehaviour
 
     cannon_shoot cs;
 
+    public int index;
+
     private void Start()
     {
         TQ = FindObjectOfType<Test_Questions>();
@@ -20,12 +22,12 @@ public class Test_Botones : MonoBehaviour
 
     public void RecibirRespuesta(int respuesta)
     {
-        if(respuesta == TA.correct[TQ.index])
+        if(respuesta == TA.correct[index])
         {
 
             Debug.Log("Respuesta correcta");
 
-            TQ.index++;
+            index++;
             TQ.NuevaPregunta();
             TA.NuevaPregunta();
 
