@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Textos de preguntas
+
 public class Test_Questions : MonoBehaviour
 {
 
