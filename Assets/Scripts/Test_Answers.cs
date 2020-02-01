@@ -2,40 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Test_Answers : MonoBehaviour
 {
-
     public Text[] botones;
-
     Test_Botones TB;
-
     public int[] correct;
-
     // Respuestas pregunta 0
     public string[] answers0;
-
     // Respuestas pregunta 1
     public string[] answers1;
-
     // Respuestas pregunta 2
     public string[] answers2;
-
     // Respuestas pregunta 3
     public string[] answers3;
-
     // Respuestas pregunta 4
     public string[] answers4;
-
     // Respuestas pregunta 5
     public string[] answers5;
-
     // Respuestas pregunta 6
     public string[] answers6;
-
     // Respuestas pregunta 7
     public string[] answers7;
-
     // Respuestas pregunta 8
     public string[] answers8;
 
@@ -169,9 +156,6 @@ public class Test_Answers : MonoBehaviour
         //
         // A partir de aqui se escriben las respuestas
         //
-
-        correct[0] = 0;
-
         //Miscelánea
 
         answers0[0] = "Braille";//Correcta
@@ -221,11 +205,11 @@ public class Test_Answers : MonoBehaviour
         answers7[2] = "McLaren";
         answers7[3] = "Ferrari";//Correcta
         /**/
-        correct[8] = 3;
+        correct[8] = 2;
         answers8[0] = "Italia";
         answers8[1] = "España";
-        answers8[2] = "Francia";
-        answers8[3] = "Ciudad del Vaticano";//Correcta
+        answers8[2] = "Francia"; //Correcta
+        answers8[3] = "Vaticano"; 
         /**/
         correct[9] = 3;
         answers9[0] = "Roma";
@@ -311,7 +295,7 @@ public class Test_Answers : MonoBehaviour
         answers21[0] = "Área";
         answers21[1] = "Volumen";
         answers21[2] = "Anchura";
-        answers21[3] = "Perímetri";
+        answers21[3] = "Perímetro";
         /**/
         correct[22] = 3;
         answers22[0] = "100";
@@ -485,23 +469,22 @@ public class Test_Answers : MonoBehaviour
         /**/
         correct[49] = 2;
         answers49[0] = "Batería";
-        answers49[0] = "Guitarra";
-        answers49[0] = "Piano";
-        answers49[0] = "Flauta travesera";
+        answers49[1] = "Guitarra";
+        answers49[2] = "Piano";
+        answers49[3] = "Flauta";
         /**/
+
 
         //
         // -------------------------------------------
         //
-
         NuevaPregunta();
     }
     public void NuevaPregunta()
     {
-
         for (int i = 0; i < 4; i++)
         {
-            if(TB.index == 0)
+            if (TB.index == 0)
             {
                 botones[i].text = answers0[i];
             }
@@ -709,5 +692,4 @@ public class Test_Answers : MonoBehaviour
         }
 
     }
-
 }

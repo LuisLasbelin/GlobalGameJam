@@ -12,6 +12,8 @@ public class Test_Botones : MonoBehaviour
 
     cannon_shoot cs;
 
+    RandomIndex RI;
+
     public int index;
 
     private void Start()
@@ -22,6 +24,8 @@ public class Test_Botones : MonoBehaviour
         PL = FindObjectOfType<Player_Life>();
 
         cs = FindObjectOfType<cannon_shoot>();
+
+        RI = FindObjectOfType<RandomIndex>();
     }
 
     public void RecibirRespuesta(int respuesta)
@@ -31,7 +35,10 @@ public class Test_Botones : MonoBehaviour
 
             Debug.Log("Respuesta correcta");
 
-            index++;
+            index = RI.generarIndiceComprobado();
+
+            //index = Random.Range(0, 49);
+
             TQ.NuevaPregunta();
             TA.NuevaPregunta();
 

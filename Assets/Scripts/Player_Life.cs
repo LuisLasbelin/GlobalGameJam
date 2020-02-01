@@ -10,23 +10,30 @@ public class Player_Life : MonoBehaviour
     public int contador = 0;
     public bool barrera = false;
     public bool respuesta = false;
-    public float timer = 0; //timer delta time cambiar estos
-    public int winTime = 10;
+
+    public int correctas;
+    public int incorrectas;
+    int puntuacion;
 
     public void RespuestaCorrecta()
     {
         contador++;
         subirBarrera();
-        youWin();
+
+        correctas++;
 
         if (contador == 3)
         {
             if (health >= 10)
             {
-                return;
+                barrera = true;
             }
-            health = health + 1;
-            contador = 0;
+            else
+            {
+                health = health + 1;
+                contador = 0;
+            }
+            
         }
 
     }
@@ -39,6 +46,8 @@ public class Player_Life : MonoBehaviour
             barrera = false;
             return;
         }
+
+        incorrectas++;
 
         health--;
         contador = 0;
@@ -64,26 +73,41 @@ public class Player_Life : MonoBehaviour
         if (health <= 0)
         {
             Debug.Log("Game over");
+
+            puntuacion = correctas - incorrectas;
+
+            if(puntuacion <= 0)
+            {
+                puntuacion = 0;
+            }
+
+            PlayerPrefs.SetInt("Points", puntuacion);
+
             health = 0;
             SceneManager.LoadScene(3); // Escena Game Over
         }
 
     }
 
-    public void youWin()
+    private void Update()
     {
 
-        if (timer >= winTime)
+        if (health >= 10)
         {
             Debug.Log("You win");
+
+            puntuacion = correctas - incorrectas;
+
+            if (puntuacion <= 0)
+            {
+                puntuacion = 0;
+            }
+
+            PlayerPrefs.SetInt("Points", puntuacion);
+
             SceneManager.LoadScene(2); // Escena Victory
         }
 
-    }
-
-    private void Update()
-    {
-        timer += Time.deltaTime;
     }
 
 }

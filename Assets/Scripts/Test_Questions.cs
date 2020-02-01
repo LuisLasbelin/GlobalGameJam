@@ -21,31 +21,29 @@ public class Test_Questions : MonoBehaviour
         //
 
 
-        //Miscelánea
-
-        preguntas[0] =  "¿Cómo se llama la escritura utilizada por personas ciegas?";
-        preguntas[1] =  "¿Quién se dice que es el rey de la selva?";
-        preguntas[2] =  "¿Cuántas estaciones tiene el año?";
-        preguntas[3] =  "¿En qué estación los días son más largos que las noches?";
-        preguntas[4] =  "¿En qué equipo de Fútbol juega Leo Messi?";
-        preguntas[5] =  "¿Qué deporte está relacionado a Roger Federer?";
-        preguntas[6] =  "¿Qué es una orquídea?";
-        preguntas[7] =  "¿En qué equipo de Formula 1 corría Michael Schumacher?";
-        preguntas[8] =  "¿En qué ciudad se encuentra el museo del Louvre?";
-        preguntas[9] =  "¿En qué país encontraremos la Basílica de San Pedro ?";
+        preguntas[0] = "¿Cómo se llama la escritura utilizada por personas ciegas?";
+        preguntas[1] = "¿Quién se dice que es el rey de la selva?";
+        preguntas[2] = "¿Cuántas estaciones tiene el año?";
+        preguntas[3] = "¿En qué estación los días son más largos que las noches?";
+        preguntas[4] = "¿En qué equipo de Fútbol juega Leo Messi?";
+        preguntas[5] = "¿Qué deporte está relacionado a Roger Federer?";
+        preguntas[6] = "¿Qué es una orquídea?";
+        preguntas[7] = "¿En qué equipo de Formula 1 corría Michael Schumacher?";
+        preguntas[8] = "¿En qué ciudad se encuentra el museo del Louvre?";
+        preguntas[9] = "¿En qué país encontraremos la Basílica de San Pedro ?";
 
         //Geografía e Historia
 
-        preguntas[10] =  "¿Cuál era la nacionalidad de Julio Cesar?";
-        preguntas[11] =  "¿Cuál es la capital de China?";
-        preguntas[12] =  "¿Abraham Lincoln fue presidente de qué país?";
-        preguntas[13] =  "¿En qué cadena montañosa encontramos la cima más alta del mundo?";
-        preguntas[14] =  "¿Dónde podemos encontrar la Estatua de la Libertad?";
-        preguntas[15] =  "¿Cuál es la capital de Dinamarca?";
-        preguntas[16] =  "¿Cómo se conoce a la escritura del Antiguo Egipto?";
-        preguntas[17] =  "¿Cuál de las siguientes ciudades no tiene mar?";
-        preguntas[18] =  "¿Qué país de los siguientes no hace frontera con Francia?";
-        preguntas[19] =  "¿Qué hombre puso por primera vez el pie en la Luna?";
+        preguntas[10] = "¿Cuál era la nacionalidad de Julio Cesar?";
+        preguntas[11] = "¿Cuál es la capital de China?";
+        preguntas[12] = "¿Abraham Lincoln fue presidente de qué país?";
+        preguntas[13] = "¿En qué cadena montañosa encontramos la cima más alta del mundo?";
+        preguntas[14] = "¿Dónde podemos encontrar la Estatua de la Libertad?";
+        preguntas[15] = "¿Cuál es la capital de Dinamarca?";
+        preguntas[16] = "¿Cómo se conoce a la escritura del Antiguo Egipto?";
+        preguntas[17] = "¿Cuál de las siguientes ciudades no tiene mar?";
+        preguntas[18] = "¿Qué país de los siguientes no hace frontera con Francia?";
+        preguntas[19] = "¿Qué hombre puso por primera vez el pie en la Luna?";
 
         //Mates
 
@@ -62,29 +60,29 @@ public class Test_Questions : MonoBehaviour
 
         //Ciencia
 
-        preguntas[30] =  "¿Cuál de estas es una enfermedad mental relacionada con la nutrición?";
-        preguntas[31] =  "¿A cuántos centímetros equivale un metro?";
-        preguntas[32] =  "¿Cuántos grados tiene un ángulo llano?";
-        preguntas[33] =  "¿Qué función tienen las proteinas?";
-        preguntas[34] =  "¿A qué aparato pertenece la Tráquea?";
-        preguntas[35] =  "¿Cómo se llama el movimiento quue hace la Tierra alrededor del Sol?";
-        preguntas[36] =  "¿A qué aparato pertenecen las venas?";
-        preguntas[37] =  "¿Qué aparato se encarga de recoger oxígeno?";
-        preguntas[38] =  "¿Cuántos días tiene un año bisiesto?";
-        preguntas[39] =  "¿Cómo se denomina a un periodo de 10 años?";
+        preguntas[30] = "¿Cuál de estas es una enfermedad mental relacionada con la nutrición?";
+        preguntas[31] = "¿A cuántos centímetros equivale un metro?";
+        preguntas[32] = "¿Cuántos grados tiene un ángulo llano?";
+        preguntas[33] = "¿Qué función tienen las proteinas?";
+        preguntas[34] = "¿A qué aparato pertenece la Tráquea?";
+        preguntas[35] = "¿Cómo se llama el movimiento quue hace la Tierra alrededor del Sol?";
+        preguntas[36] = "¿A qué aparato pertenecen las venas?";
+        preguntas[37] = "¿Qué aparato se encarga de recoger oxígeno?";
+        preguntas[38] = "¿Cuántos días tiene un año bisiesto?";
+        preguntas[39] = "¿Cómo se denomina a un periodo de 10 años?";
 
         //Arte
 
-        preguntas[40] =  "¿Qué inventaron los hermanos Lumière?";
-        preguntas[41] =  "¿Cuántas líneas tiene un pentagrama?";
-        preguntas[42] =  "¿Cuáles son los colores fríos? Azul, Violeta y...";
-        preguntas[43] =  "¿Qué tipo de instrumento pertenece la flauta dulce?";
-        preguntas[44] =  "¿ A cuántas corcheas equivale una redonda ?";
-        preguntas[45] =  "¿Qué es un boceto? Un dibujo...";
+        preguntas[40] = "¿Qué inventaron los hermanos Lumière?";
+        preguntas[41] = "¿Cuántas líneas tiene un pentagrama?";
+        preguntas[42] = "¿Cuáles son los colores fríos? Azul, Violeta y...";
+        preguntas[43] = "¿Qué tipo de instrumento pertenece la flauta dulce?";
+        preguntas[44] = "¿ A cuántas corcheas equivale una redonda ?";
+        preguntas[45] = "¿Qué es un boceto? Un dibujo...";
         preguntas[46] = "¿Cuáles son los colores primarios? Amarillo, Rojo y...";
-        preguntas[47] =  "¿Qué era Pablo Picasso?";
-        preguntas[48] =  "¿Quién compuso 'Las cuatro estaciones' ?";
-        preguntas[49] =  "¿Qué instrumento tocaba Mozart?";
+        preguntas[47] = "¿Qué era Pablo Picasso?";
+        preguntas[48] = "¿Quién compuso 'Las cuatro estaciones' ?";
+        preguntas[49] = "¿Qué instrumento tocaba Mozart?";
 
         //
         // -------------------------------------------
