@@ -10,8 +10,6 @@ public class cannon_shoot : MonoBehaviour
 
     public int force;
 
-    public int normalTime = 10; //El normal time se usa cuando el jugador tiene menos de 10 de vida
-    public int speedTime = 5; //El speed time se usa cuando el jugador tiene 10 de vida
 
     // Start is called before the first frame update
     void Start()

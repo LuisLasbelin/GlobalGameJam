@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Textos de preguntas
-
 public class Test_Questions : MonoBehaviour
 {
 
@@ -17,6 +15,16 @@ public class Test_Questions : MonoBehaviour
     private void Start()
     {
         TB = FindObjectOfType<Test_Botones>();
+
+        //
+        // A partir de aquí se definen las preguntas
+        //
+
+        preguntas[0] = "¿Cuál es un color frío?";
+
+        //
+        // -------------------------------------------
+        //
 
         NuevaPregunta();
     }

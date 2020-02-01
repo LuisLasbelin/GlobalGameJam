@@ -1,6 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Player_Life : MonoBehaviour
@@ -10,9 +10,9 @@ public class Player_Life : MonoBehaviour
     public int contador = 0;
     public bool barrera = false;
     public bool respuesta = false;
-    public int timer = 0;//timer delta time cambiar estos
+    public float timer = 0; //timer delta time cambiar estos
     public int winTime = 10;
-    
+
     public void RespuestaCorrecta()
     {
         contador++;
@@ -21,7 +21,7 @@ public class Player_Life : MonoBehaviour
 
         if (contador == 3)
         {
-            if (health>=10)
+            if (health >= 10)
             {
                 return;
             }
@@ -46,17 +46,17 @@ public class Player_Life : MonoBehaviour
     }
 
     public void subirBarrera()
-{
-
-    if (health == 10)
     {
-        if (contador == 3)
+
+        if (health == 10)
         {
-            barrera = true;
-            contador = 0;
+            if (contador == 3)
+            {
+                barrera = true;
+                contador = 0;
+            }
         }
     }
-  }
 
     public void gameOver()
     {
@@ -65,7 +65,7 @@ public class Player_Life : MonoBehaviour
         {
             Debug.Log("Game over");
             health = 0;
-            return;
+            SceneManager.LoadScene(3); // Escena Game Over
         }
 
     }
@@ -73,13 +73,17 @@ public class Player_Life : MonoBehaviour
     public void youWin()
     {
 
-        if(timer>=winTime)
+        if (timer >= winTime)
         {
             Debug.Log("You win");
-            return;
+            SceneManager.LoadScene(2); // Escena Victory
         }
-        timer++;
 
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
     }
 
 }

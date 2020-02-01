@@ -3,38 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Script de los textos de las respuestas
-
 public class Test_Answers : MonoBehaviour
 {
 
     public Text[] botones;
 
     Test_Botones TB;
-
-    private void Start()
-    {
-        TB = FindObjectOfType<Test_Botones>();
-
-        NuevaPregunta();
-    }
-    public void NuevaPregunta()
-    {
-
-        for (int i = 0; i < 4; i++)
-        {
-            if(TB.index == 0)
-            {
-                botones[i].text = answers0[i];
-            }
-            if (TB.index == 1)
-            {
-                botones[i].text = answers1[i];
-            }
-
-        }
-
-    }
 
     public int[] correct;
 
@@ -64,4 +38,43 @@ public class Test_Answers : MonoBehaviour
 
     // Respuestas pregunta 8
     public string[] answers8;
+
+    private void Start()
+    {
+        TB = FindObjectOfType<Test_Botones>();
+
+        //
+        // A partir de aqui se escriben las respuestas
+        //
+        correct[0] = 0;
+        answers0[0] = "Azul";
+        answers0[1] = "Rojo";
+        answers0[2] = "Verde";
+        answers0[3] = "Amarillo";
+
+        //
+        // -------------------------------------------
+        //
+
+        NuevaPregunta();
+    }
+    public void NuevaPregunta()
+    {
+
+        for (int i = 0; i < 4; i++)
+        {
+            if(TB.index == 0)
+            {
+                botones[i].text = answers0[i];
+            }
+            if (TB.index == 1)
+            {
+                botones[i].text = answers1[i];
+            }
+
+        }
+
+    }
+
+
 }

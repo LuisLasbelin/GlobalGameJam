@@ -7,6 +7,8 @@ public class ball_hit : MonoBehaviour
 
     Player_Life PL;
 
+    public GameObject particles;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +24,8 @@ public class ball_hit : MonoBehaviour
             PL.RespuestaMal();
 
         }
+
+        Instantiate(particles, transform.position, Quaternion.identity);
 
         Destroy(gameObject);
 
