@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Script de los textos de las respuestas
+
 public class Test_Answers : MonoBehaviour
 {
 
