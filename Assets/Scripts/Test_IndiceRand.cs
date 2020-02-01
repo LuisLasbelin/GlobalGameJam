@@ -11,7 +11,24 @@ public class Test_IndiceRand : MonoBehaviour
     public int categorias = 5;
     public int preguntas = 50;
     public int cont = 0;
+    public int[] ListaNegra = new int[50];
+    public int contLista = 0;
 
+
+    public void comprobacion(int index)
+    {
+        for(int i=0; i < 50; i++)
+        {
+
+            if(ListaNegra[i] == index){
+
+                calcularIndice();
+            
+            }
+        }
+        ListaNegra[contLista] = index;
+        contLista++;
+    }
 
     public void contadordeAcertadas()
     {
@@ -55,14 +72,12 @@ public class Test_IndiceRand : MonoBehaviour
 
         if (index >= 50)
         {
-            index = 49;
+            index = Random.Range(0, 49);
         }
+
+        comprobacion(index);
 
         return index;
 
     }
-
-
-
-
 }
