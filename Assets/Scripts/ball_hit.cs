@@ -19,7 +19,7 @@ public class ball_hit : MonoBehaviour
         {
             Debug.Log("Castle hit");
 
-            PL.health--;
+            PL.RespuestaMal();
 
         }
 
