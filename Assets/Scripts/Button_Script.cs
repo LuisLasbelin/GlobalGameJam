@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Script para los botones de las respuestas
+
 public class Button_Script : MonoBehaviour
 {
 
