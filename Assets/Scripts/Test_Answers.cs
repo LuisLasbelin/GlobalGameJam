@@ -334,16 +334,16 @@ public class Test_Answers : MonoBehaviour
         answers27[3] = "9";
         /**/
         correct[28] = 1;
-        answers28[0] = "Priemero";
+        answers28[0] = "Primero";
         answers28[1] = "Segundo";
         answers28[2] = "Tercero";
         answers28[3] = "Último";
         /**/
         correct[29] = 0;
-        answers29[0] = "3h y 10 min";
-        answers29[1] = "1h y 40 min";
+        answers29[0] = "3h, 10min";
+        answers29[1] = "1h, 40min";
         answers29[2] = "3h";
-        answers29[3] = "2h y 50 min";
+        answers29[3] = "2h, 50min";
         /**/
 
         //Ciencia

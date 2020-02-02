@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Castle : MonoBehaviour
 {
-    public GameObject castle;
+    public GameObject castle, life;
 
     Player_Life PL;
 
-    public Vector3[] stages;
+    public Vector3[] castleStages, lifeStages;
 
     private void Start()
     {
@@ -18,6 +18,7 @@ public class Castle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        castle.transform.position = stages[PL.health];
+        castle.transform.position = castleStages[PL.health];
+        life.transform.position = lifeStages[PL.health];
     }
 }

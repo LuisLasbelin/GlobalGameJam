@@ -67,6 +67,8 @@ public class RandomIndex : MonoBehaviour
     public int calcularIndice()
     {
 
+        categoria = 0;
+
         //Se busca un numero random desde el 0 hasta el 49
         int index = Random.Range(0, 49);
 
@@ -82,6 +84,7 @@ public class RandomIndex : MonoBehaviour
             //Aqui se define la categoria a la que pertenece la pregunta
             index = index - 10;
             categoria++;
+
             //El limite se encuentra cuando indice va a entrar en los numeros negativos
             if (index - 10 <= 0)
             {

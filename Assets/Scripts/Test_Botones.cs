@@ -32,6 +32,7 @@ public class Test_Botones : MonoBehaviour
     {
         if(respuesta == TA.correct[index])
         {
+            cs.RestartTimer();
 
             Debug.Log("Respuesta correcta");
 

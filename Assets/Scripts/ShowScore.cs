@@ -12,6 +12,11 @@ public class ShowScore : MonoBehaviour
     void Start()
     {
         score.text = PlayerPrefs.GetInt("Points").ToString();
+
+        if (PlayerPrefs.GetInt("Points") > PlayerPrefs.GetInt("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", PlayerPrefs.GetInt("Points"));
+        }
     }
 
 }

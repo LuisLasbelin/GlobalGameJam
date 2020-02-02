@@ -8,32 +8,41 @@ public class Player_Life : MonoBehaviour
 
     public int health = 10;
     public int contador = 0;
-    public bool barrera = false;
+
     public bool respuesta = false;
 
     public int correctas;
     public int incorrectas;
     int puntuacion;
 
+    // Sprites de la racha
+    public SpriteRenderer sr;
+    public Sprite[] numeros;
+
+    // Timer
+    public float currTime = 200;
+
+    private void Start()
+    {
+        currTime = 200;
+    }
+
     public void RespuestaCorrecta()
     {
-        contador++;
-        subirBarrera();
+        if(contador >= 3)
+        {
+            contador = 4;
+        }
+        else
+        {
+            contador++;
+        }
 
         correctas++;
 
-        if (contador == 3)
+        if (contador >= 3)
         {
-            if (health >= 10)
-            {
-                barrera = true;
-            }
-            else
-            {
-                health = health + 1;
-                contador = 0;
-            }
-            
+            health = health + 1;
         }
 
     }
@@ -41,30 +50,12 @@ public class Player_Life : MonoBehaviour
     public void RespuestaMal()
     {
 
-        if (barrera == true)
-        {
-            barrera = false;
-            return;
-        }
+        health--;
 
         incorrectas++;
 
-        health--;
         contador = 0;
         gameOver();
-    }
-
-    public void subirBarrera()
-    {
-
-        if (health == 10)
-        {
-            if (contador == 3)
-            {
-                barrera = true;
-                contador = 0;
-            }
-        }
     }
 
     public void gameOver()
@@ -74,9 +65,9 @@ public class Player_Life : MonoBehaviour
         {
             Debug.Log("Game over");
 
-            puntuacion = correctas - incorrectas;
+            puntuacion = Mathf.RoundToInt(currTime);
 
-            if(puntuacion <= 0)
+            if (puntuacion <= 0)
             {
                 puntuacion = 0;
             }
@@ -91,12 +82,14 @@ public class Player_Life : MonoBehaviour
 
     private void Update()
     {
-
+        //
+        // Condicion de victoria
+        //
         if (health >= 10)
         {
             Debug.Log("You win");
 
-            puntuacion = correctas - incorrectas;
+            puntuacion = Mathf.RoundToInt(currTime);
 
             if (puntuacion <= 0)
             {
@@ -107,6 +100,16 @@ public class Player_Life : MonoBehaviour
 
             SceneManager.LoadScene(2); // Escena Victory
         }
+
+        //
+        // Contador de racha
+        //
+        sr.sprite = numeros[contador];
+
+        //
+        // Cuenta el tiempo
+        //
+        currTime -= Time.deltaTime;
 
     }
 
